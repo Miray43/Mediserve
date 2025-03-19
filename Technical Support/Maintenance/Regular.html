@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Maintenance</title>
+    <link rel="stylesheet" href="Regular.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <!-- Back Button -->
+        <div class="back-button">
+            <a href="#" onclick="goBack()">
+                <img src="/icon/Back.png" alt="Back Icon" class="back-icon"> Back
+            </a>
+        </div>
+
+        <!-- Home Button -->
+        <div class="Home-button">
+            <a href="#">
+                <img src="/icon/Home.png" alt="Home Icon" class="Home-icon"> Home
+            </a>
+        </div>
+    </div> <!-- End of navigation buttons -->
+
+    <!-- Header Section -->
+    <header>
+        <!-- Microsoft Logo -->
+        <div class="ms-logo">
+            <img src="/icon/MS Logo.png" alt="MS Logo">
+        </div>
+        <!-- Hospital Logo -->
+        <div class="hospital-logo">
+            <img src="/icon/hospital-logo.png" alt="King Abdulaziz Hospital">
+        </div>
+    </header>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <h1 class="title">Regular Maintenance</h1> <!-- Form Title -->
+        <p class="subtitle">Record device maintenance information</p> <!-- Form Subtitle -->
+
+        <form action="#" method="POST"> <!-- Form Start -->
+            
+            <!-- Last Maintenance Date -->
+            <label for="maintenance-date">Last Maintenance Date <span class="required">*</span></label>
+            <input type="date" id="maintenance-date" name="maintenance-date" required>
+
+            <!-- Maintenance Frequency -->
+            <label>Maintenance Frequency <span class="required">*</span></label>
+            <div class="radio-group">
+                <label><input type="radio" name="frequency" value="3months" required> Every 3 months</label>
+                <label><input type="radio" name="frequency" value="4months" required> Every 4 months</label>
+            </div>
+
+            <!-- Device Type Selection -->
+            <label for="device-type">Device Type <span class="required">*</span></label>
+            <select id="device-type" name="device-type" required>
+                <option value="" disabled selected>Select device type</option>
+                <option value="Pc">Pc</option>
+                <option value="Printer">Printer</option>
+                <option value="Scanner">Scanner</option>
+            </select>
+
+            <!-- Device Specifications Selection -->
+            <label for="device-spec">Device Specifications <span class="required">*</span></label>
+            <select id="device-spec" name="device-spec" required>
+                <option value="" disabled selected>Select specification</option>
+                <option value="Model A">Model A</option>
+                <option value="Model B">Model B</option>
+            </select>
+
+            <!-- Detailed Device Specifications (Checkbox Options) -->
+            <label>Detailed Device Specifications <span class="required">*</span></label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="details[]" value="Overheats"> Overheats</label>
+                <label><input type="checkbox" name="details[]" value="Makes noise"> Makes noise</label>
+                <label><input type="checkbox" name="details[]" value="Working"> Working</label>
+                <label><input type="checkbox" name="details[]" value="Needs updating"> Needs updating</label>
+                <label><input type="checkbox" name="details[]" value="Doesn't need updating"> Doesn't need updating</label>
+                <label><input type="checkbox" name="details[]" value="Not working"> Not working</label>
+                <label><input type="checkbox" name="details[]" value="Software issues"> Contains software issues</label>
+                <label><input type="checkbox" name="details[]" value="Fast"> Fast</label>
+                <label><input type="checkbox" name="details[]" value="No software problems"> Doesn't contain any software problems</label>
+                <label><input type="checkbox" name="details[]" value="Slow"> Slow</label>
+            </div>
+
+            <!-- Notes Section -->
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Add any additional notes here..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Maintenance Log</button>
+        </form> <!-- End of Form -->
+    </div> <!-- End of Form Container -->
+
+    <!-- Include JavaScript File -->
+    <script src="Maintenance.js"></script> <!-- External JavaScript File -->
+
+</body>
+</html>
