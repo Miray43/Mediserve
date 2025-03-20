@@ -274,11 +274,12 @@ textarea:focus {
 @media screen and (max-width: 768px) {
     .form-container {
         width: 90%;
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 
     .form-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch; /* Stretch buttons to full width */
     }
 
     .right-buttons {
@@ -287,7 +288,11 @@ textarea:focus {
     }
 
     .device-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .device-box {
+        width: 100%; /* Full width for device boxes */
     }
 }
 
@@ -295,5 +300,25 @@ textarea:focus {
 @media screen and (max-width: 480px) {
     .form-container {
         width: 95%;
+        padding: 10px; /* Further adjust padding for mobile */
+    }
+
+    .title {
+        font-size: 20px; /* Smaller title font */
+    }
+
+    .subtitle {
+        font-size: 14px; /* Smaller subtitle font */
+    }
+
+    .section-title {
+        font-size: 12px; /* Smaller section title font */
+    }
+
+    .draft-btn,
+    .cancel-btn,
+    .submit-btn {
+        width: 100%; /* Full width buttons */
+        margin-bottom: 10px; /* Space between buttons */
     }
 }
