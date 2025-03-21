@@ -21,6 +21,9 @@ app.get("/test-db", (req, res) => {
   });
 });
 
+
+
+
 app.get("/users", (req, res) => {
   db.query("SELECT * FROM User_info", (err, result) => {
     if (err) {
